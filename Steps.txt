@@ -1,0 +1,40 @@
+---------------------------------------------------------------
+PART : 1 { Create Node Enviroment & Test the app }
+---------------------------------------------------------------
+Step 1: Launch Server on AWS & Setup the node js enviroment.
+
+Step 2: Allow port:3000 to security group
+
+Step 3: Clone the repo.
+
+Step 4: create another new file in the same location called index.js
+	(  set up Express and define a request handler )
+
+Step 5: npm start -> go check with http://{public_ip}:3000
+-----------------------------------------------------------------
+Part: 2 {Dockerize the Node App} 
+	Docker Image Link:https://hub.docker.com/repository/docker/niket50/node-app
+-----------------------------------------------------------------
+Step 1: Install docker on AWS & start the services
+
+Step 2: create docker file at same place
+
+Step 3: build image: docker build . -t node-app
+
+Step 4: We can check image is created or not.
+
+Step 5: run the container os with that image & expose to the public world with port 3000 i.e,NAT.
+	( Crated a docker proxy kind of process & it will take request and send it to docker interally)
+
+Step 6: #docker ps -a : We can check our OS id.
+
+Step 7: Push that image to docker hub.
+
+Step 8: Image: #docker pull niket50/node-app:latest
+-------------------------------------------------------------------
+Part: 3 {Compse the docker file: help in production env. }
+-------------------------------------------------------------------
+Step 1: Create a docker-compose.yml file at same location at port:3333
+
+Step 2: then, Docker-compose up
+-------------------------------------------------------------------- 
